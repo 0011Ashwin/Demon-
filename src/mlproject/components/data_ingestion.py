@@ -1,4 +1,5 @@
 ## Mysql ----> Train test split 
+# Import necessary Libraries
 import os
 import sys
 from src.mlproject.exception import CustomException
@@ -9,14 +10,16 @@ from src.mlproject.utils import read_sql_data
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
-
+# Configuration class for dataingestion
 @dataclass
 class DataIngestionConfig:
     train_data: str = os.path.join('artifacts', 'train_data.csv')
     test_data: str = os.path.join('artifacts', 'test_data.csv')
     raw_data: str = os.path.join('artifacts', 'raw_data.csv')
-    
+
+# Data ingestion class
 class DataIngestion:
+    # from here, class implementation will begin
     def __init__(self):
         self.ingestion_config = DataIngestionConfig()
     
