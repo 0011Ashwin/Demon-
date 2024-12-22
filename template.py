@@ -3,13 +3,17 @@ from pathlib import Path
 import logging
 
 
+## Configure the logging setting from logging module
 logging.basicConfig(level=logging.INFO)
 
+## Define the project name as "mlproject".
 project_name="mlproject"
 
+#----------- Important part ----------#
+## List of files that created for project structure 
 list_of_files=[
-    f"src/{project_name}/__init__.py", ## source file for packages
-    f"src/{project_name}/components/__init__.py", ## from here we defining the components of model
+    f"src/{project_name}/__init__.py",
+    f"src/{project_name}/components/__init__.py", 
     f"src/{project_name}/components/data_ingestion.py",
     f"src/{project_name}/components/data_transformation.py",
     f"src/{project_name}/components/model_trainer.py",
@@ -27,8 +31,9 @@ list_of_files=[
     
 ]
 
+
 for filepath in list_of_files:
-    filepath = Path(filepath) # path variable find releated path of mlproject
+    filepath = Path(filepath) 
     filedir, filename = os.path.split(filepath)
     
     if filedir != "":
