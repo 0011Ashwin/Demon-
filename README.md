@@ -3,3 +3,4 @@
 ## git add .
 ## git status
 ## git commit -m "name of file or commit folder"
+## dvc init
